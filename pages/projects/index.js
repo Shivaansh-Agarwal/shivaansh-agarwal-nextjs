@@ -1,5 +1,8 @@
 import Layout from "../../components/Layout.jsx";
 import { ProjectCard } from "../../components/Projects/ProjectCard.jsx";
+import imgQuizzoMania from "../../public/images/screenshot-quizzomania.png";
+import imgFinMart from "../../public/images/screenshot-finmart.png";
+import imgFinTube from "../../public/images/screenshot-fintube.png";
 
 const Projects = () => {
   const projectsList = [
@@ -7,7 +10,7 @@ const Projects = () => {
       name: "QuizzoMania",
       description:
         "A webapp which allows users to attempt quizzes on a variety of topics, and supports custom JWT Authentication.",
-      imgSrc: "/images/screenshot-quizzomania.png",
+      imgSrc: imgQuizzoMania,
       techStack: ["ReactJS", "ExpressJS", "MongoDB", "TailwindCSS"],
       liveLink: "https://quizzo-mania-shivaansh.netlify.app/",
       codeFrontend:
@@ -18,7 +21,7 @@ const Projects = () => {
       name: "FinMart",
       description:
         "One stop destination to get the books you need to improve your financial wisdom.",
-      imgSrc: "/images/screenshot-finmart.png",
+      imgSrc: imgFinMart,
       techStack: ["React", "ExpressJS", "MongoDB", "CSS3"],
       liveLink: "https://fin-mart-dev.netlify.app/",
       codeFrontend: "https://github.com/Shivaansh-Agarwal/fin-mart",
@@ -28,7 +31,7 @@ const Projects = () => {
       name: "FinTube",
       description:
         "A Place to learn all there's to learn about Personal Finance, Investing from a list of high quality curated content from Youtube.",
-      imgSrc: "/images/screenshot-fintube.png",
+      imgSrc: imgFinTube,
       techStack: ["ReactJS", "CSS3"],
       liveLink: "https://fin-tube-dev.netlify.app/",
       codeFrontend: "https://github.com/Shivaansh-Agarwal/fin-tube",
