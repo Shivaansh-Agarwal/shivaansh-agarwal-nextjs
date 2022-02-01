@@ -2,11 +2,23 @@ import { useState } from "react";
 
 export const ProjectCard = ({ project }) => {
   const [isCursorOnCard, setIsCursonOnCard] = useState(false);
-  const { name, description, techStack, liveLink, codeFrontend, codeBackend } =
-    project;
+  const {
+    name,
+    description,
+    techStack,
+    liveLink,
+    codeFrontend,
+    codeBackend,
+    tags,
+  } = project;
+  const isWebApp = tags.includes("webapp");
   return (
     <div
-      className="flex flex-col gap-4 justify-between border rounded bg-white p-4 shadow-xl hover:ring ring-offset-2 ring-red-500/25 ring-offset-red-100"
+      className={`flex flex-col gap-4 justify-between border rounded bg-white p-4 shadow-xl hover:ring ring-offset-2 ${
+        isWebApp
+          ? "bg-lime-50 ring-lime-900/50 ring-offset-lime-100"
+          : "bg-fuchsia-50 ring-fuchsia-900/50 ring-offset-fuchsia-100"
+      }`}
       onMouseEnter={() => {
         setIsCursonOnCard(true);
       }}
@@ -18,7 +30,9 @@ export const ProjectCard = ({ project }) => {
         <a
           className={`text-xl ${
             isCursorOnCard
-              ? "text-red-500 font-bold"
+              ? isWebApp
+                ? "text-lime-700 font-bold"
+                : "text-fuchsia-700 font-bold"
               : "text-gray-900 font-medium"
           } `}
           href={liveLink}
@@ -28,9 +42,12 @@ export const ProjectCard = ({ project }) => {
           {name}
         </a>
         <div className="mt-4 text-base text-gray-600">{description}</div>
-        <div className="mt-2 text-base text-">
+        <div className="mt-2 text-base">
           <span className="font-medium text-gray-700">Tech Stack: </span>
           {techStack.join(", ")}
+        </div>
+        <div className="mt-1 text-base text-blue-900 text-right">
+          {tags.map((tag) => `#${tag}`).join(", ")}
         </div>
       </div>
       <ProjectCardButtons
