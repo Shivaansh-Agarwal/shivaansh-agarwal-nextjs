@@ -50,6 +50,17 @@ const projectsData = [
     codeBackend: "",
     tags: ["interview", "react"],
   },
+  {
+    name: "Carousel/Slideshow Component",
+    description:
+      "A carousel/slideshow is used to cycle through image elements. It's usecase is mostly used in E-Commerce websites to display ad campaigns.",
+    techStack: ["ReactJS"],
+    liveLink: "https://react-ui-components-practice.vercel.app/slideshow",
+    codeFrontend:
+      "https://github.com/Shivaansh-Agarwal/react-ui-components-practice/tree/main/pages/slideshow",
+    codeBackend: "",
+    tags: ["interview", "react", "practice"],
+  },
 ];
 
 export { projectsData };

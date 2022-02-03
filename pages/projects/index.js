@@ -43,9 +43,6 @@ const Projects = () => {
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
         {projectsData
           .filter((project) => {
-            console.log(filterType);
-            console.log(project.tags);
-            console.log(project.tags.includes("webapp"));
             if (filterType === "ALL") {
               return true;
             } else if (
