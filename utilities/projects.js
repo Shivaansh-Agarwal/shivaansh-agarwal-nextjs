@@ -61,6 +61,17 @@ const projectsData = [
     codeBackend: "",
     tags: ["interview", "react", "practice"],
   },
+  {
+    name: "Accordion",
+    description:
+      "Accordions are useful when you want to toggle between hiding and showing large amount of content:",
+    techStack: ["ReactJS"],
+    liveLink: "https://react-ui-components-practice.vercel.app/accordion",
+    codeFrontend:
+      "https://github.com/Shivaansh-Agarwal/react-ui-components-practice/tree/main/pages/accordion",
+    codeBackend: "",
+    tags: ["interview", "react", "practice"],
+  },
 ];
 
 export { projectsData };
