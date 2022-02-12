@@ -72,6 +72,16 @@ const projectsData = [
     codeBackend: "",
     tags: ["interview", "react", "practice"],
   },
+  {
+    name: "Image to PDF Convertor",
+    description:
+      "A small webapp to convert a bunch of uploaded images into a PDF File",
+    techStack: ["ReactJS, TailwindCSS"],
+    liveLink: "https://image-to-pdf-by-shivaansh.netlify.app/",
+    codeFrontend: "https://github.com/Shivaansh-Agarwal/img-to-pdf-convertor",
+    codeBackend: "",
+    tags: ["webapp", "react"],
+  },
 ];
 
 export { projectsData };
