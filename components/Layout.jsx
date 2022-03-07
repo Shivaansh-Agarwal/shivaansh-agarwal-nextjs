@@ -24,7 +24,7 @@ const Layout = ({ children, title }) => {
       </Head>
       <div>
         <Header />
-        <main className="w-11/12 sm:10/12 md:w-9/12 lg:w-8/12 xl:px-48 2xl:px-60 mx-auto mt-24">
+        <main className="w-11/12 sm:w-10/12 md:w-9/12 2xl:w-8/12 xl:px-48 2xl:px-60 mx-auto mt-24">
           {children}
         </main>
       </div>
