@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
-import Layout from "../../components/Layout.jsx";
-import { BlogsGrid } from "../../components/Blogs";
+import Layout from "../components/Layout.jsx";
+import { BlogsGrid } from "../components/Blogs";
 
 export default function Blogs() {
   const { isLoading, data, isError, error } = useQuery(

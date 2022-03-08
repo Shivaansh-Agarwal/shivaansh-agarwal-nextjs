@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Layout from "../../components/Layout.jsx";
-import { ProjectCard } from "../../components/Projects/ProjectCard.jsx";
-import { projectsData } from "../../utilities/projects.js";
+import Layout from "../components/Layout.jsx";
+import { ProjectCard } from "../components/Projects/ProjectCard.jsx";
+import { projectsData } from "../utilities/projects.js";
 
 const Projects = () => {
   const [filterType, setFilterType] = useState("ALL");
