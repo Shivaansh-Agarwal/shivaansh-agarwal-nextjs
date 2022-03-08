@@ -15,16 +15,18 @@ export function BlogCard({
     year: "numeric",
   });
   return (
-    <div className="border bg-white drop-shadow-lg flex flex-col rounded-lg">
+    <div
+      className="border bg-white drop-shadow-lg flex flex-col rounded-lg cursor-pointer"
+      onClick={() => {
+        window.open(blogURL);
+      }}
+    >
       <Image
         src={imageURL}
         height={150}
         width={250}
         alt="BlogCover"
         className="rounded-t-lg"
-        onClick={() => {
-          window.open(blogURL);
-        }}
       />
       <div className="flex flex-col justify-end items-end p-4">
         <div className="flex flex-col gap-2">
