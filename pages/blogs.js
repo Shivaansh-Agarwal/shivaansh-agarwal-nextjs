@@ -3,31 +3,44 @@ import { useQuery } from "react-query";
 import Layout from "../components/Layout.jsx";
 import { BlogsGrid } from "../components/Blogs";
 
-export default function Blogs() {
-  const {
-    isLoading,
-    data: data1,
-    isError,
-    error,
-  } = useQuery("blogs-hashnode1", fetchHashnodeBlogs.bind(this, 0));
-  const { data: data2 } = useQuery(
-    "blogs-hashnode2",
-    fetchHashnodeBlogs.bind(this, 1)
-  );
+export async function getServerSideProps() {
+  const res1 = await fetchHashnodeBlogs(0);
+  const res2 = await fetchHashnodeBlogs(1);
 
-  const blogsPage1 = data1?.data?.data.user.publication.posts;
-  const blogsPage2 = data2?.data?.data.user.publication.posts;
+  const blogsPage1 = res1?.data?.data.user.publication.posts;
+  const blogsPage2 = res2?.data?.data.user.publication.posts;
 
-  let allBlogs = [];
-  if (blogsPage1 && blogsPage2) {
-    allBlogs = blogsPage1.concat(blogsPage2);
-  }
+  let allBlogs = blogsPage1.concat(blogsPage2);
+  // Pass data to the page via props
+  return { props: { allBlogs } };
+}
+
+export default function Blogs({ allBlogs }) {
+  // const {
+  //   isLoading,
+  //   data: data1,
+  //   isError,
+  //   error,
+  // } = useQuery("blogs-hashnode1", fetchHashnodeBlogs.bind(this, 0));
+  // const { data: data2 } = useQuery(
+  //   "blogs-hashnode2",
+  //   fetchHashnodeBlogs.bind(this, 1)
+  // );
+
+  // const blogsPage1 = data1?.data?.data.user.publication.posts;
+  // const blogsPage2 = data2?.data?.data.user.publication.posts;
+
+  // let allBlogs = [];
+  // if (blogsPage1 && blogsPage2) {
+  //   allBlogs = blogsPage1.concat(blogsPage2);
+  // }
 
   return (
     <Layout title="Shivaansh | Blogs">
-      {isLoading && <div className="text-lg">Loading...</div>}
-      {isError && <div className="text-lg">{error.message}</div>}
-      {blogsPage1 && blogsPage2 && <BlogsGrid blogsData={allBlogs} />}
+      {/* {isLoading && <div className="text-lg">Loading...</div>} */}
+      {/* {isError && <div className="text-lg">{error.message}</div>} */}
+      {/* {blogsPage1 && blogsPage2 && <BlogsGrid blogsData={allBlogs} />} */}
+      <BlogsGrid blogsData={allBlogs} />
     </Layout>
   );
 }
