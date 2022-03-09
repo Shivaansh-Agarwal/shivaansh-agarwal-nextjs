@@ -26,7 +26,7 @@ const experienceData = [
         designation: "Software Development Engineer",
         employmentType: "Full Time",
         startDate: { year: 2020, month: 8, date: 1 },
-        endDate: { year: 2021, month: 6, date: 31 },
+        endDate: { year: 2021, month: 6, date: 30 },
         description: `Awards & Achievements  
   • Spot Award in Q1 2021 for efforts put in making SCA release successful.  
   • Team Award in Q4 2020 for Componentization of several flows in Mobile Banking & Online Banking apps to enable Strong Customer Authentication (SCA).  
