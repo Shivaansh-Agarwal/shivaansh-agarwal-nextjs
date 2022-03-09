@@ -35,8 +35,7 @@ export const BlogsGrid = function ({ blogsData }) {
   );
 };
 
-function getFilteredBlogsData(blogsData) {
-  const blogsList = blogsData.data.data.user.publication.posts;
+function getFilteredBlogsData(blogsList) {
   return blogsList.map((blog) => {
     return {
       id: blog._id,

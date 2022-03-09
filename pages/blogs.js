@@ -4,25 +4,39 @@ import Layout from "../components/Layout.jsx";
 import { BlogsGrid } from "../components/Blogs";
 
 export default function Blogs() {
-  const { isLoading, data, isError, error } = useQuery(
-    "blogs-hashnode",
-    fetchHashnodeBlogs
+  const {
+    isLoading,
+    data: data1,
+    isError,
+    error,
+  } = useQuery("blogs-hashnode1", fetchHashnodeBlogs.bind(this, 0));
+  const { data: data2 } = useQuery(
+    "blogs-hashnode2",
+    fetchHashnodeBlogs.bind(this, 1)
   );
+
+  const blogsPage1 = data1?.data?.data.user.publication.posts;
+  const blogsPage2 = data2?.data?.data.user.publication.posts;
+
+  let allBlogs = [];
+  if (blogsPage1 && blogsPage2) {
+    allBlogs = blogsPage1.concat(blogsPage2);
+  }
 
   return (
     <Layout title="Shivaansh | Blogs">
       {isLoading && <div className="text-lg">Loading...</div>}
       {isError && <div className="text-lg">{error.message}</div>}
-      {data && <BlogsGrid blogsData={data} />}
+      {blogsPage1 && blogsPage2 && <BlogsGrid blogsData={allBlogs} />}
     </Layout>
   );
 }
 
-function fetchHashnodeBlogs() {
+function fetchHashnodeBlogs(pageNo) {
   const query = `{
     user(username: "shivaansh") { 
       publication {
-        posts {
+        posts (page: ${pageNo}) {
           _id
           title
           slug
