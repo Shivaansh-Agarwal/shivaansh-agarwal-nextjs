@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 import Layout from "../components/Layout.jsx";
+import { LoadingScreen } from "../components/LoadingScreen.jsx";
 import { BlogsGrid } from "../components/Blogs";
 
 export default function Blogs() {
@@ -25,7 +26,7 @@ export default function Blogs() {
 
   return (
     <Layout title="Shivaansh | Blogs">
-      {isLoading && <div className="text-lg">Loading...</div>}
+      {isLoading && <LoadingScreen />}
       {isError && <div className="text-lg">{error.message}</div>}
       {blogsPage1 && blogsPage2 && <BlogsGrid blogsData={allBlogs} />}
     </Layout>
