@@ -3,6 +3,11 @@ import Image from "next/image";
 export const SocialMediaBar = () => {
   const socialMediaDetailsList = [
     {
+      url: "mailto:shivanshagrawal1997@gmail.com",
+      src: "/images/icon-gmail.svg",
+      alt: "Gmail",
+    },
+    {
       url: "https://github.com/Shivaansh-Agarwal",
       src: "/images/icon-github.svg",
       alt: "Github",
