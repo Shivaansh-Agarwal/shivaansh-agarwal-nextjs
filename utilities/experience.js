@@ -6,18 +6,38 @@ const present = {
 
 const experienceData = [
   {
+    id: 3,
+    companyName: "MyGate",
+    companyLogo: "/images/logo-mygate.jpeg",
+    startDate: { year: 2022, month: 3, date: 22 },
+    endDate: present,
+    location: "Bangalore, India",
+    designations: [
+      {
+        designation: "Software Engineer I",
+        employmentType: "Full Time",
+        startDate: { year: 2022, month: 3, date: 22 },
+        endDate: present,
+        description: `Work Done:   
+• Improved performance by reducing the bundle size of Chat Application by 11% and via other optimizations.
+
+Tech Stack: ReactJS, Redux, MaterialUI`,
+      },
+    ],
+  },
+  {
     id: 2,
     companyName: "Temenos",
     companyLogo: "/images/logo-temenos.jfif",
     startDate: { year: 2019, month: 6, date: 19 },
-    endDate: present,
+    endDate: { year: 2022, month: 3, date: 21 },
     location: "Hyderabad, India",
     designations: [
       {
         designation: "Senior Software Engineer",
         employmentType: "Full Time",
         startDate: { year: 2021, month: 7, date: 1 },
-        endDate: present,
+        endDate: { year: 2022, month: 3, date: 21 },
         description: `Work Done:  
   • Responsible for converting monolithic Authentication Module for Mobile and Online Banking Application to Microapp
   `,
@@ -61,7 +81,7 @@ const experienceData = [
   {
     id: 1,
     companyName: "Webhelp India",
-    companyLogo: "/images/logo-webhelp.jfif",
+    companyLogo: "/images/logo-webhelp.jpeg",
     startDate: { year: 2018, month: 6, date: 1 },
     endDate: { year: 2018, month: 7, date: 31 },
     location: "Gurgaon, India",

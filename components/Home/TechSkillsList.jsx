@@ -3,12 +3,12 @@ import Image from "next/image";
 export const TechSkillsList = () => {
   const techList = [
     {
-      skill: "Javascript",
-      icon: "/images/icon-javascript.png",
-    },
-    {
       skill: "ReactJS",
       icon: "/images/icon-reactjs.svg",
+    },
+    {
+      skill: "Javascript",
+      icon: "/images/icon-javascript.png",
     },
     {
       skill: "Next.js",
@@ -25,6 +25,10 @@ export const TechSkillsList = () => {
     {
       skill: "TailwindCSS",
       icon: "/images/icon-tailwindcss.svg",
+    },
+    {
+      skill: "MUI",
+      icon: "/images/icon-mui.png",
     },
   ];
   return (
