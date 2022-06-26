@@ -7,6 +7,10 @@ export const TechSkillsList = () => {
       icon: "/images/icon-reactjs.svg",
     },
     {
+      skill: "Redux",
+      icon: "/images/icon-redux.png",
+    },
+    {
       skill: "Javascript",
       icon: "/images/icon-javascript.png",
     },
