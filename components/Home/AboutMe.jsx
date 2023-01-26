@@ -19,8 +19,8 @@ export const AboutMe = () => {
         <h1 className="text-3xl sm:text-4xl pb-2 sm:pb-3">About Me</h1>
         <p className="flex-shrink text-gray-600 w-3/5 text-center sm:w-full">
           Hi I am <strong>Shivaansh Agarwal</strong>, a {age} years old Web
-          Developer, currently working at MyGate as a Software Developer
-          (Frontend) in Bengaluru, India. <br />I did my bachelors in Computer
+          Developer, currently working at MyGate as a <br/> Software Developer in Bengaluru, India. 
+          <br />I did my bachelors in Computer
           Science and Engineering with Specialization in Data Analytics and
           graduated in 2020. <br />I enjoy working on Frontend side of
           Web-development.

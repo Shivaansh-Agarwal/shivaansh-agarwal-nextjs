@@ -1,6 +1,6 @@
 const present = {
   year: new Date().getFullYear(),
-  month: new Date().getMonth(),
+  month: new Date().getMonth()+1,
   date: new Date().getDate(),
 };
 
@@ -19,9 +19,13 @@ const experienceData = [
         startDate: { year: 2022, month: 3, date: 22 },
         endDate: present,
         description: `Work Done:   
-• Improved performance by reducing the bundle size of Chat Application by 11% and via other optimizations.
+• Developed a backend feature to monitor the performance of Marketing Campaigns (30L+ user base)   
+• Responsible for creating the new UI Experience for P2P Chats in MyGate Application.   
+• Reduced the chat page load time in Homes Application from around 5 seconds to under 1 second.   
+• Created a Javascript SDK to be used in multiple React & NextJS based frontend applications, for capturing user metric data.   
+• Improved the overall performance of Chat Application by reducing the bundle size by 11% and performing other optimizations.   
 
-Tech Stack: ReactJS, Redux, MaterialUI`,
+Tech Stack: ReactJS, Redux, MaterialUI, NestJS`,
       },
     ],
   },

@@ -18,7 +18,7 @@ export const SocialMediaBar = () => {
       alt: "Linkedin",
     },
     {
-      url: "https://twitter.com/Shivansh_97",
+      url: "https://twitter.com/shivaansh9june",
       src: "/images/icon-twitter.svg",
       alt: "Twitter",
     },

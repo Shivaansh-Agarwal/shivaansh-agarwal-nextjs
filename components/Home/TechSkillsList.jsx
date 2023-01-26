@@ -1,43 +1,9 @@
 import Image from "next/image";
 
-export const TechSkillsList = () => {
-  const techList = [
-    {
-      skill: "ReactJS",
-      icon: "/images/icon-reactjs.svg",
-    },
-    {
-      skill: "Redux",
-      icon: "/images/icon-redux.png",
-    },
-    {
-      skill: "Javascript",
-      icon: "/images/icon-javascript.png",
-    },
-    {
-      skill: "Next.js",
-      icon: "/images/icon-nextjs.svg",
-    },
-    {
-      skill: "HTML5",
-      icon: "/images/icon-html.png",
-    },
-    {
-      skill: "CSS3",
-      icon: "/images/icon-css.png",
-    },
-    {
-      skill: "TailwindCSS",
-      icon: "/images/icon-tailwindcss.svg",
-    },
-    {
-      skill: "MUI",
-      icon: "/images/icon-mui.png",
-    },
-  ];
+export const TechSkillsList = ({ skillsList }) => {
   return (
-    <div className="flex flex-row flex-wrap justify-center sm:justify-start">
-      {techList.map((item) => {
+    <div className="flex flex-row flex-wrap justify-center gap-y-2 sm:justify-start">
+      {skillsList.map((item) => {
         const { skill, icon } = item;
         return <Skill key={skill} icon={icon} skill={skill} />;
       })}

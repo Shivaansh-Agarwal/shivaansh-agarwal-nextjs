@@ -19,8 +19,8 @@ export function getDurationString(sd, ed) {
 
 export function getDurationLength(sd, ed) {
   const durationInMonths = Math.round(
-    (new Date(ed.year, ed.month - 1, ed.date) -
-      new Date(sd.year, sd.month - 1, sd.date)) /
+    (new Date(ed.year, ed.month - 1, ed.date).getTime() -
+      new Date(sd.year, sd.month - 1, sd.date).getTime()) /
       2629746000
   );
   const years = Math.floor(durationInMonths / 12);
