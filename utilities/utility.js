@@ -9,7 +9,7 @@ export function getDurationString(sd, ed) {
     { month: "long" }
   )} ${ed.year}`;
   const currYear = new Date().getFullYear();
-  const currMonth = new Date().getMonth();
+  const currMonth = new Date().getMonth()+1;
   const currDate = new Date().getDate();
   if (currYear === ed.year && currMonth === ed.month && currDate === ed.date) {
     endString = "Present";
