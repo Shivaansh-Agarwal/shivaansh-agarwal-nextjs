@@ -6,26 +6,52 @@ const present = {
 
 const experienceData = [
   {
+    id: 4,
+    companyName: "ET Money (Times Internet)",
+    companyLogo: "/images/logo-etmoney.png",
+    startDate: { year: 2023, month: 3, date: 16 },
+    endDate: present,
+    location: "Gurgaon, India",
+    designations: [
+      {
+        designation: "Software Engineer II",
+        employmentType: "Full Time",
+        startDate: { year: 2023, month: 3, date: 16 },
+        endDate: present,
+        description: `Work:  
+• Currently working on the new Cash Product for the Web Application.   
+• Created a solution using strapi to enable the SEO team to easily change the content of the FD pages without any developer intervention.   
+
+Tech Stack: ReactJS, Redux, MaterialUI, Javascript, NextJS
+`,
+      },
+    ],
+  },
+  {
     id: 3,
     companyName: "MyGate",
     companyLogo: "/images/logo-mygate.jpeg",
     startDate: { year: 2022, month: 3, date: 22 },
-    endDate: present,
+    endDate: { year: 2023, month: 3, date: 15 },
     location: "Bangalore, India",
     designations: [
       {
         designation: "Software Engineer I",
         employmentType: "Full Time",
         startDate: { year: 2022, month: 3, date: 22 },
-        endDate: present,
-        description: `Work Done:   
-• Developed a backend feature to monitor the performance of Marketing Campaigns (30L+ user base)   
+        endDate: { year: 2023, month: 3, date: 15 },
+        description: `Awards and Achievements:   
+• Got recognised by the CTO twice in different quarters for efforts put in improving performance of Chat Application & creating the metrics JS SDK.   
+        
+Work:   
+• Fixed a critical bug which was causing the marketing campaigns to fail when target audience size was more than ~10 lakhs.   
+• Developed a backend feature for tracking the performance of Marketing Campaigns (30L+ user base)   
+• Created a Javascript SDK and integrated it in all javascript based frontend applications, for capturing user metric data.   
 • Responsible for creating the new UI Experience for P2P Chats in MyGate Application.   
 • Reduced the chat page load time in Homes Application from around 5 seconds to under 1 second.   
-• Created a Javascript SDK to be used in multiple React & NextJS based frontend applications, for capturing user metric data.   
 • Improved the overall performance of Chat Application by reducing the bundle size by 11% and performing other optimizations.   
 
-Tech Stack: ReactJS, Redux, MaterialUI, NestJS`,
+Tech Stack: ReactJS, Redux, MaterialUI, Javascript, NestJS, MongoDB, Mongoose ODM, RabbitMQ, Redis, Amazon S3, Amazon CloudFront`,
       },
     ],
   },

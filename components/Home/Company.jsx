@@ -42,7 +42,7 @@ export const Company = ({ experience }) => {
           )}
           <div className="text-gray-500 font-light">{`${durationString} (${
             years !== 0 ? `${years} yr` : ""
-          } ${months} mos)`}</div>
+          } ${months !== 0 ? `${months} mos` : ""})`}</div>
           <div className="text-gray-500 font-light">{location}</div>
         </div>
         <button

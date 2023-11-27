@@ -28,7 +28,7 @@ export const Designation = ({ position }) => {
         <div className="text-gray-600 font-light">{employmentType}</div>
         <div className="text-gray-500 font-light mb-2">{`${durationString} (${
           years !== 0 ? `${years} yr ` : ""
-        }${months} mos)`}</div>
+        }${months !== 0 ? `${months} mos` : ""})`}</div>
         <div className="relative">
           <Markdown markdown={descriptionToDisplay} />
           {isBtnVisible && (
