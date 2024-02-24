@@ -32,8 +32,8 @@ export const AboutMe = () => {
             <a className="text-blue-600">MyGate</a>
           </Link>{" "}
           Bangalore and{" "}
-          <Link href="https://www.temenos.com/">
-            <a className="text-blue-600">Temenos</a>
+          <Link href="https://www.kony.com/index.html">
+            <a className="text-blue-600">Kony India Pvt. Ltd.</a>
           </Link>{" "}
           Hyderabad.
           <br /><br />

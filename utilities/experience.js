@@ -57,8 +57,8 @@ Tech Stack: ReactJS, Redux, MaterialUI, Javascript, NestJS, MongoDB, Mongoose OD
   },
   {
     id: 2,
-    companyName: "Temenos",
-    companyLogo: "/images/logo-temenos.jfif",
+    companyName: "Kony India Pvt. Ltd.",
+    companyLogo: "/images/logo-kony.png",
     startDate: { year: 2019, month: 6, date: 19 },
     endDate: { year: 2022, month: 3, date: 21 },
     location: "Hyderabad, India",
